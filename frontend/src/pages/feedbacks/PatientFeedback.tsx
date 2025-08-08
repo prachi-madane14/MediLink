@@ -20,7 +20,7 @@ const PatientFeedback = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/users/doctors")
+      .get("https://medilink-uz08.onrender.com/users/doctors")
       .then((res) => setDoctors(res.data))
       .catch((err) => console.error("Error fetching doctors", err));
   }, []);
@@ -30,7 +30,7 @@ const PatientFeedback = () => {
     const token = localStorage.getItem("token");
 
     axios
-      .get("http://localhost:5001/appointments", {
+      .get("https://medilink-uz08.onrender.com/appointments", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -51,7 +51,7 @@ const PatientFeedback = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5001/api/feedback",
+        "https://medilink-uz08.onrender.com/api/feedback",
         {
           doctorId: selectedDoctorId,
           patientId,

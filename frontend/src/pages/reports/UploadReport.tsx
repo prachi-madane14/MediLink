@@ -68,7 +68,7 @@ const UploadReport: React.FC = () => {
     if (!token) return;
     setLoadingDoctors(true);
     try {
-      const res = await axios.get("http://localhost:5001/users/doctors", {
+      const res = await axios.get("https://medilink-uz08.onrender.com/users/doctors", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDoctors(res.data);
@@ -113,7 +113,7 @@ const UploadReport: React.FC = () => {
     try {
       setUploadStatus("Uploading & extracting OCR...");
       const res = await axios.post(
-        "http://localhost:5001/reports/upload",
+        "https://medilink-uz08.onrender.com/reports/upload",
         formData,
         {
           headers: {

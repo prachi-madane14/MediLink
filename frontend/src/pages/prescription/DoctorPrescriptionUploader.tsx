@@ -28,7 +28,7 @@ const DoctorPrescriptionUploader = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/users/patients", {
+      .get("https://medilink-uz08.onrender.com/users/patients", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setPatients(res.data))
@@ -39,7 +39,7 @@ const DoctorPrescriptionUploader = () => {
     if (selectedPatientId) {
       axios
         .get(
-          `http://localhost:5001/appointments?role=doctor&patientId=${selectedPatientId}`,
+          `https://medilink-uz08.onrender.com/appointments?role=doctor&patientId=${selectedPatientId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -77,7 +77,7 @@ const DoctorPrescriptionUploader = () => {
       const doctorId = decodedToken.id;
 
       await axios.post(
-        "http://localhost:5001/api/prescriptions",
+        "https://medilink-uz08.onrender.com/api/prescriptions",
         {
           patientId: selectedPatientId,
           doctorId,

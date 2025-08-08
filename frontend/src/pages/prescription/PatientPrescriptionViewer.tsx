@@ -39,7 +39,7 @@ const PatientPrescriptionViewer = () => {
         const patientId = decodedToken.id;
 
         const response = await axios.get(
-          `http://localhost:5001/api/prescriptions/${patientId}`,
+          `https://medilink-uz08.onrender.com/api/prescriptions/${patientId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

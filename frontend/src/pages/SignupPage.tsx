@@ -35,7 +35,7 @@ const SignupPage = () => {
     }
 
     try {
-      const response = await axios.post("/auth/signup", {
+      const response = await axios.post("https://medilink-uz08.onrender.com/auth/signup", {
         name: fullName,
         email,
         password,
