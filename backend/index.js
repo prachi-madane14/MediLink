@@ -25,11 +25,7 @@ connectDB();
 const app = express();
 
 // CORS config (allow frontend at 5173 to access backend)
-const allowedOrigins = [
-  'http://localhost:5173',
-  'http://localhost:3000',
-  'https://medilink-delta.vercel.app'
-];
+const allowedOrigins = ["https://medi-link-xi.vercel.app"];
 
 app.use(cors({
   origin: function (origin, callback) {
