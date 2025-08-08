@@ -25,10 +25,23 @@ connectDB();
 const app = express();
 
 // CORS config (allow frontend at 5173 to access backend)
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'https://medilink-delta.vercel.app'
+];
+
 app.use(cors({
-  origin: 'http://localhost:8081', // frontend dev server
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
-}));  
+}));
+
 
 // Middleware to parse incoming JSON
 app.use(express.json());
