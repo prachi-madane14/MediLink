@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5001', // backend base URL
+  baseURL: 'https://medilink-uz08.onrender.com', // backend base URL
 });
 
 // Automatically attach token from localStorage (if present)
