@@ -34,7 +34,7 @@ const DoctorHealthRecord = () => {
 
   const fetchPatients = async () => {
     try {
-      const res = await axios.get('https://medilink-uz08.onrender.com/users/patients', {
+      const res = await axios.get('/users/patients', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPatients(res.data);
@@ -45,7 +45,7 @@ const DoctorHealthRecord = () => {
 
   const fetchAppointments = async (patientId: string) => {
     try {
-      const res = await axios.get('https://medilink-uz08.onrender.com/appointments', {
+      const res = await axios.get('/appointments', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAppointments(res.data.filter((a: any) => a.patientId === patientId));
@@ -56,7 +56,7 @@ const DoctorHealthRecord = () => {
 
   const fetchHealthRecords = async (patientId: string) => {
     try {
-      const res = await axios.get(`https://medilink-uz08.onrender.com/api/health-records/${patientId}`, {
+      const res = await axios.get(`/api/health-records/${patientId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setHealthRecords(res.data);

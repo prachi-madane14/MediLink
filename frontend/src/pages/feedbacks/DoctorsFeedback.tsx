@@ -22,7 +22,7 @@ const DoctorFeedback = () => {
     const fetchFeedback = async () => {
       try {
         const res = await axios.get(
-          `https://medilink-uz08.onrender.com/api/feedback/${doctorId}`,
+          `/api/feedback/${doctorId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

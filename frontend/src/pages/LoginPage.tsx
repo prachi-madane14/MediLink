@@ -26,7 +26,7 @@ const LoginPage = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("https://medilink-uz08.onrender.com/auth/login", formData);
+      const response = await axios.post("/auth/login", formData);
 
       const userData = response.data;
 

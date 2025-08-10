@@ -35,7 +35,7 @@ const ChatbotWidget = () => {
   setInput("");
 
   try {
-    const res = await fetch("https://medilink-uz08.onrender.com/chatbot", {
+    const res = await fetch("/chatbot", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

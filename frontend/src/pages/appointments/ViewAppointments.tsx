@@ -15,7 +15,7 @@ const ViewAppointments = () => {
     try {
       const role = localStorage.getItem("role") || "doctor";
       console.log("User role:", role);
-      const res = await axios.get(`https://medilink-uz08.onrender.com/appointments?role=${role}`);
+      const res = await axios.get(`/appointments?role=${role}`);
       const isDoctor = role === "doctor";
       setAppointments(res.data);
     } catch (err) {
@@ -31,7 +31,7 @@ const ViewAppointments = () => {
 
   const updateStatus = async (id: string, status: string) => {
     try {
-      await axios.put(`https://medilink-uz08.onrender.com/appointments/${id}/status`, { status });
+      await axios.put(`/appointments/${id}/status`, { status });
       setAppointments((prev) =>
         prev.map((apt) =>
           apt._id === id ? { ...apt, status } : apt

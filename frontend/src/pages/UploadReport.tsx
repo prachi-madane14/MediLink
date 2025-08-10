@@ -39,7 +39,7 @@ const UploadReport = () => {
 
   const fetchReports = async () => {
     try {
-      const res = await axios.get(`https://medilink-uz08.onrender.com/reports/${patientId}`, {
+      const res = await axios.get(`/reports/${patientId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUploadedReports(res.data);
@@ -89,7 +89,7 @@ const UploadReport = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("https://medilink-uz08.onrender.com/api/reports/upload", formData, {
+      const res = await axios.post("/api/reports/upload", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
