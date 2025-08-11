@@ -30,8 +30,8 @@ interface UserType {
   email: string;
   role: "patient" | "doctor";
 }
-const API_URL = import.meta.env.VITE_API_URL;
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 const UploadReport: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -70,7 +70,7 @@ const UploadReport: React.FC = () => {
     if (!token) return;
     setLoadingDoctors(true);
     try {
-      const res = await axios.get("/users/doctors", {
+      const res = await axios.get(`${API_URL}/users/doctors`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDoctors(res.data);
@@ -115,7 +115,7 @@ const UploadReport: React.FC = () => {
     try {
       setUploadStatus("Uploading & extracting OCR...");
       const res = await axios.post(
-        "/reports/upload",
+        `${API_URL}/reports/upload`,
         formData,
         {
           headers: {

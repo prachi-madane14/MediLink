@@ -31,7 +31,7 @@ const ViewReports = () => {
         const userId = localStorage.getItem("userId");
         
         // Using fetch instead of axios for artifact compatibility
-        const response = await fetch(`/reports/${userId}`, {
+        const response = await fetch(`${API_URL}/reports/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -228,7 +228,7 @@ const ViewReports = () => {
                       <p className="text-sm font-medium text-gray-700 mb-2">Report Image:</p>
                       <div className="bg-gray-50 border border-gray-200 rounded-lg p-2 inline-block">
                         <img
-                          src={`/${report.fileUrl}`}
+                          src={`${API_URL}/${report.fileUrl}`}
                           alt={`Report ${index + 1}`}
                           className="h-20 w-20 object-cover rounded"
                         />
