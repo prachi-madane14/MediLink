@@ -24,7 +24,7 @@ const DoctorFeedback = () => {
     const fetchFeedback = async () => {
       try {
         const res = await axios.get(
-          `${API_URL}${doctorId}`,
+          `${API_URL}/${doctorId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
