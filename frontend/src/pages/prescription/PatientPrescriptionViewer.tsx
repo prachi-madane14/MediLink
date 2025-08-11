@@ -18,6 +18,7 @@ import {
   Lightbulb,
   ArrowLeft,
 } from "lucide-react";
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 const PatientPrescriptionViewer = () => {
@@ -40,7 +41,7 @@ const PatientPrescriptionViewer = () => {
         const patientId = decodedToken.id;
 
         const response = await axios.get(
-          `/api/prescriptions/${patientId}`,
+          `${API_URL}/api/prescriptions/${patientId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

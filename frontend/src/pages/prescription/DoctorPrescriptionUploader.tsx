@@ -30,7 +30,7 @@ const DoctorPrescriptionUploader = () => {
 
   useEffect(() => {
     axios
-      .get("/users/patients", {
+      .get(`${API_URL}/users/patients`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setPatients(res.data))
@@ -41,7 +41,7 @@ const DoctorPrescriptionUploader = () => {
     if (selectedPatientId) {
       axios
         .get(
-          `/appointments?role=doctor&patientId=${selectedPatientId}`,
+          `${API_URL}/appointments?role=doctor&patientId=${selectedPatientId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -79,7 +79,7 @@ const DoctorPrescriptionUploader = () => {
       const doctorId = decodedToken.id;
 
       await axios.post(
-        "/api/prescriptions",
+        `${API_URL}/api/prescriptions`,
         {
           patientId: selectedPatientId,
           doctorId,
