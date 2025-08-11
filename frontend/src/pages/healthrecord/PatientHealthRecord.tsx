@@ -30,6 +30,8 @@ import {
   Apple,
 } from "lucide-react";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const parseBP = (bp: string) => {
   const [systolic, diastolic] = bp.split("/").map(Number);
   return {

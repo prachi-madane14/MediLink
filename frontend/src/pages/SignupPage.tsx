@@ -15,6 +15,8 @@ import { Stethoscope, User } from "lucide-react";
 import { toast } from "sonner";
 import axios from "../utils/axios"; // 👈 your axios instance
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const SignupPage = () => {
   const [formData, setFormData] = useState({
     fullName: "",

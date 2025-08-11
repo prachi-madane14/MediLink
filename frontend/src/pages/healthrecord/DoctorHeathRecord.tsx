@@ -24,6 +24,7 @@ import {
   Shield,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const DoctorHealthRecord = () => {
   const [patients, setPatients] = useState([]);

@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const DoctorPrescriptionUploader = () => {
   const [patients, setPatients] = useState([]);
   const [appointments, setAppointments] = useState([]);

@@ -9,6 +9,8 @@ import { Heart, ArrowLeft, Upload, FileText, Eye, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 // ✅ Get user + token from localStorage
 const user = JSON.parse(localStorage.getItem("user") || "{}");
 const token = localStorage.getItem("token");

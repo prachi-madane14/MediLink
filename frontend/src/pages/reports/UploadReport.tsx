@@ -30,6 +30,8 @@ interface UserType {
   email: string;
   role: "patient" | "doctor";
 }
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 const UploadReport: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
