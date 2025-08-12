@@ -1,37 +1,37 @@
 🩺 MediLink – Smart Medical Appointment & Health Record System
 MediLink is a full-stack healthcare web application built using the MERN stack, designed to streamline the medical appointment process for both patients and doctors.
 
-🔗 This project was developed in collaboration with  https://github.com/shrutipachpor810, whose contributions were invaluable in bringing this idea to life. 
+🔗 This project was developed in collaboration with @shrutipachpor810, whose contribution was invaluable in bringing this idea to life.
 
-✨ Features:
-🔐 Authentication & Role-based Access – Secure signup/login with roles (Doctor/Patient)
+✨Key Features
+🔐 Secure Authentication & Role-Based Dashboards
+Separate portals for patients and doctors, ensuring data privacy and tailored functionalities.
 
-📅 Appointment Booking – Patients can book appointments directly with doctors
+📅 Streamlined Appointment Scheduling
+Patients can search for doctors, view availability, and confirm appointments in real time.
 
-📄 OCR-based Medical Report Upload – Extracts key health data (BP, Sugar, Weight)
+🔍 OCR Integration
+Scan and digitize prescriptions, reports, and lab results instantly, making medical data accessible anytime.
 
-📊 Health Trends & Visual Analytics – Interactive charts showing vitals over time using Chart.js
+📊 Health Analytics & Trends
+Visual charts powered by Recharts help patients and doctors track health trends over time for better decision-making.
 
-👤 Profile Management – View/Edit profile for both doctors and patients
+🤖 AI-Powered Chatbot
+Integrated chatbot using the Gemini API to assist with general medical guidance, platform help, and appointment queries (not for diagnosis).
 
-💬 Doctor Feedback & Ratings – Patients can rate doctors post-appointment
+👤 Profile & Record Management
+Editable profiles for both roles, along with access to complete medical history and past reports.
 
-📝 Doctor Prescription Uploads – Doctors can write and upload text-based prescriptions
+💬 Doctor Feedback & Ratings
+Patients can leave post-consultation reviews to enhance transparency and trust.
 
-📁 View Past Appointments & Reports
+📝 Digital Prescription Management
+Doctors can create and share prescriptions securely in a structured format.
 
-🧰 Tools:
-Postman, Thunder Client (for API testing)
-Git & GitHub (for version control)
-Vite (for faster React frontend build)
+🛠 Tech Stack
+Frontend: React, Vite, Tailwind CSS
+Backend: Node.js, Express.js, MongoDB, Mongoose
+Other Tools: Postman,Multer,Tesseract.js,Recharts,JWT Authentication,Gemini API
 
-💻 Technologies Used:
+🔗 Live Demo : https://medi-link-sable.vercel.app
 
-Frontend: React.js, Vite, Tailwind CSS, CSS Modules, Chart.js
-
-Backend: Node.js, Express.js, MongoDB Atlas, JWT Auth, Tesseract.js (OCR)
-
-💡 Goal:
-To build a smart, user-friendly platform that improves the patient-doctor experience and makes healthcare more accessible and organized.
-
-🌐 Live Demo: https://medi-link-sable.vercel.app/
