@@ -4,6 +4,7 @@ MediLink is a full-stack healthcare web application built using the MERN stack, 
 🔗 This project was developed in collaboration with @shrutipachpor810, whose contribution was invaluable in bringing this idea to life.
 
 ✨Key Features
+
 🔐 Secure Authentication & Role-Based Dashboards
 Separate portals for patients and doctors, ensuring data privacy and tailored functionalities.
 
@@ -29,9 +30,10 @@ Patients can leave post-consultation reviews to enhance transparency and trust.
 Doctors can create and share prescriptions securely in a structured format.
 
 🛠 Tech Stack
-Frontend: React, Vite, Tailwind CSS
-Backend: Node.js, Express.js, MongoDB, Mongoose
-Other Tools: Postman,Multer,Tesseract.js,Recharts,JWT Authentication,Gemini API
+
+🔹Frontend: React, Vite, Tailwind CSS
+🔹Backend: Node.js, Express.js, MongoDB, Mongoose
+🔹Other Tools: Postman,Multer,Tesseract.js,Recharts,JWT Authentication,Gemini API
 
 🔗 Live Demo : https://medi-link-sable.vercel.app
 
